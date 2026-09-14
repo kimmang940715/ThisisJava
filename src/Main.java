@@ -3,9 +3,16 @@
 
         public class Main {
             public static void main(String[] args) {
-                int x = 1;
-                int y = 2;
-                int result = x + y;
-                System.out.println(result);
+                int x = 3;
+                int y = 5;
+
+                System.out.println("x : " + x + " y : " + y);
+
+                int temp  = x;
+                x = y;
+                y = temp;
+
+                System.out.println("x : " + x + " y : " + y);
+
             }
         }
