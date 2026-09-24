@@ -1,18 +1,12 @@
 public class CalculatorExample {
     static void main() {
-        Calculator myCalc = new Calculator();
+        Calculator myCalcu = new Calculator();
 
-        myCalc.powerOn();
+        double result1 = myCalcu.areaRectangle(10);
 
-        int result1 = myCalc.plus(5,6);
-        System.out.println("result1 : " + result1);
+        double result2 = myCalcu.areaRectangle(10,20);
 
-        int x  = 10;
-        int y = 4;
-
-        double result2 = myCalc.divide(x,y);
-        System.out.println("result2 : " + result2);
-
-        myCalc.powerOff();;
+        System.out.println("정사각형 넓이 : " + result1);
+        System.out.println("직사각형 넓이 : " + result2);
     }
 }
