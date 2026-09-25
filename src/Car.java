@@ -1,28 +1,17 @@
 public class Car {
-    int gas;
+    String model;
+    int speed;
 
-    void setGas(int gas) {
-        this.gas = gas;
+    Car(String model) {
+        this.model = model;
     }
 
-    boolean isLeftGas() {
-        if(gas == 0) {
-            System.out.println("gas가 없습니다");
-            return false;
-        }
-        System.out.println("gas 가 있습니다");
-        return true;
+    void setSpeed(int speed) {
+        this.speed = speed;
     }
 
     void run() {
-        while (true) {
-            if (gas > 0) {
-                System.out.println("달립니다. (gas 잔량 : " + gas + ")");
-                gas -= 1;
-            } else {
-                System.out.println("멈춥니다. (gas 잔량 : " + gas + ")");
-                return;
-            }
-        }
+        this.setSpeed(100);
+        System.out.println(this.model + "가 달립니다. (시속 : " + this.speed + "km/h)");
     }
 }
