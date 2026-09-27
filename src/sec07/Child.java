@@ -1,12 +1,9 @@
 package sec07;
 
 public class Child extends Parent{
-    @Override
-    public void method2() {
-        System.out.println("Chile-method2()");
-    }
+    public String field2;
 
     public void method3() {
-        System.out.println("Chile-method3()");
+        System.out.println("Chile-method3();");
     }
 }
