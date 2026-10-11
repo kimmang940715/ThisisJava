@@ -4,6 +4,6 @@ public class AExample {
     static void main() {
         A a = new A();
 
-        A.B b = a.new B();
+        a.useB();
     }
 }
