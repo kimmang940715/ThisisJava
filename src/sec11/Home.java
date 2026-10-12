@@ -1,0 +1,41 @@
+package sec11;
+
+public class Home {
+    private RemoteControl rc = new RemoteControl() {
+        @Override
+        public void turnOn() {
+            System.out.println("TV 를 켭니다");
+        }
+
+        @Override
+        public void turhOff() {
+            System.out.println("TV를 끕니다");
+        }
+    };
+
+    public void use1() {
+        rc.turnOn();
+        rc.turhOff();
+    }
+
+    public void use2() {
+        RemoteControl rc = new RemoteControl() {
+            @Override
+            public void turnOn() {
+                System.out.println("에어컨을 켭니다");
+            }
+
+            @Override
+            public void turhOff() {
+                System.out.println("에어컨을 끕니다");
+            }
+        };
+        rc.turnOn();
+        rc.turhOff();
+    }
+
+    public void use3(RemoteControl rc) {
+        rc.turnOn();
+        rc.turhOff();
+    }
+}
