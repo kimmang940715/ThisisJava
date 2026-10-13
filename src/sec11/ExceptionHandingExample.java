@@ -12,7 +12,7 @@ public class ExceptionHandingExample {
 
 
         try {
-            Class.forName("java.lang.String2")
+            Class.forName("java.lang.String2");
         }catch (ClassNotFoundException e){
             e.printStackTrace();
         }
