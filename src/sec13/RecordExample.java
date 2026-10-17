@@ -12,5 +12,6 @@ public class RecordExample {
         Member m1 = new Member("winter", "눈송이", 25);
         Member m2 = new Member("winter", "눈송이", 25);
         System.out.println("m1.hashCode() : " + m1.hashCode());
+
     }
 }
