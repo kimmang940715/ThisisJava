@@ -1,19 +1,21 @@
 package sec13;
 
 public class GenericExample {
-    public static <T> Box<T> boxing(T t) {
-        Box<T> box = new Box<T>();
-        box.set(t);
-        return box;
+    public static <T extends Number> boolean compare(T t1, T t2) {
+        System.out.println("compare(" + t1.getClass().getSimpleName() + ", " + t2.getClass().getSimpleName() + ")");
+
+        double v1 = t1.doubleValue();
+        double v2 = t2.doubleValue();
+
+        return (v1 == v2);
     }
 
-    public static void main() {
-        Box<Integer> box1 = boxing(100);
-        int intValue = box1.get();
-        System.out.println(intValue);
+    static void main() {
+        boolean result1 = compare(10, 20);
+        System.out.println(result1);
+        System.out.println();
 
-        Box<String> box2 = boxing("홍길동");
-        String strValue = box2.get();
-        System.out.println(strValue);
+        boolean result2 = compare(4.5 , 4.5);
+        System.out.println(result2);
     }
 }
